@@ -1,0 +1,24 @@
+<div class="row mx-0 py-3 card-container">
+  <div class="col-12 col-md-12">
+    <img width="270" height="195" [src]="'assets/images/'+data.image"/>
+  </div> 
+  <div class="col-12 col-md-12 pt-2">
+    <p class="mb-1">
+      Name: <span class="font-weight-bold">{{ data.name }}</span>
+    </p>
+    <p class="mb-1">
+      Tower: <span class="font-weight-bold">{{ data.buildingTowers }}</span>
+    </p>
+    <p class="mb-1">
+      Property Type:
+      <span class="font-weight-bold">{{ data.propertyType }}</span>
+    </p>
+    <p class="mb-1 pt-2">Configurations:</p>
+    <div class="d-flex">
+      <ul class="pl-4">
+        <li>Min Price: &#8377; {{ data.minPrice }}</li>
+        <li *ngFor="let item of data.configuration">{{item}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
